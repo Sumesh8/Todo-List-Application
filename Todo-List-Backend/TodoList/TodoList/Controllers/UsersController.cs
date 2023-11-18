@@ -6,7 +6,7 @@ using TodoList.Services.Profiles;
 
 namespace TodoList.Controllers
 {
-    [Route("api/users")] // Specifies this controller handles requests under the "api/users" route.
+    [Route("api/users")] // To specifies this controller handles requests under the "api/users" route.
     [ApiController]
     public class UsersController : ControllerBase // For indicates that this class is an API controller.
     {

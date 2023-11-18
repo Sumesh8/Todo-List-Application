@@ -14,7 +14,7 @@ namespace TodoList.Services.Profiles
 
         public User GetByCredentials(string email, string pw) // For retrieves a user based on provided email and password credentials.
         {
-            return _context.users.Where(user => user.Email.Equals(email) && user.Password.Equals(pw)).First(); // For cheack email and password validation.
+            return _context.Users.Where(user => user.Email.Equals(email) && user.Password.Equals(pw)).First(); // For cheack email and password validation.
 
         }
 

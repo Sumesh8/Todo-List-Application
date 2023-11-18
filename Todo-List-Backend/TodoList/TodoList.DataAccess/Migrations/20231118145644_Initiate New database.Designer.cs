@@ -10,14 +10,42 @@ using TodoList.DataAccess;
 namespace TodoList.DataAccess.Migrations
 {
     [DbContext(typeof(TodoListDbContext))]
-    [Migration("20231118072358_Initial migrations")]
-    partial class Initialmigrations
+    [Migration("20231118145644_Initiate New database")]
+    partial class InitiateNewdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.14");
+
+            modelBuilder.Entity("TodoList.Models.Todo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Tittle")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserEmail")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserEmail");
+
+                    b.ToTable("Todos");
+                });
 
             modelBuilder.Entity("TodoList.Models.User", b =>
                 {
@@ -42,7 +70,7 @@ namespace TodoList.DataAccess.Migrations
 
                     b.HasKey("Email");
 
-                    b.ToTable("users");
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
@@ -73,6 +101,22 @@ namespace TodoList.DataAccess.Migrations
                             LastName = "Thisari",
                             Password = "123"
                         });
+                });
+
+            modelBuilder.Entity("TodoList.Models.Todo", b =>
+                {
+                    b.HasOne("TodoList.Models.User", "User")
+                        .WithMany("ToDos")
+                        .HasForeignKey("UserEmail")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("TodoList.Models.User", b =>
+                {
+                    b.Navigation("ToDos");
                 });
 #pragma warning restore 612, 618
         }

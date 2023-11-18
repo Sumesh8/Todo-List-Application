@@ -23,5 +23,7 @@ namespace TodoList.Models
         [Required] // For assign Password as not null
         [MaxLength(12)] // for assign max length to the Password
         public string Password { get; set; } = string.Empty;
+
+        public ICollection<Todo> Todos { get; } = new List<Todo>();
     }
 }
