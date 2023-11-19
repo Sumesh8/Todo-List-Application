@@ -18,5 +18,10 @@ namespace TodoList.Services.Profiles
 
         }
 
+        public User GetFullNameSql(string email) // For retrieves a user based on provided email.
+        {
+            return _context.Users.Where(user => user.Email.Equals(email)).First(); // For cheack email validation.
+        }
+
     }
 }

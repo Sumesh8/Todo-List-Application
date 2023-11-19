@@ -10,5 +10,7 @@ namespace TodoList.Services.Profiles
     public interface IUserRepository
     {
         public User GetByCredentials(string email, string pw); // For authontication validation.
+
+        public User GetFullNameSql(string email); // For get user full name.
     }
 }

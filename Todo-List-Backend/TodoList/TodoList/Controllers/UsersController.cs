@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
+using System.Security.Claims;
+using TodoList.Models;
 using TodoList.Services.Profiles;
 
 
@@ -33,5 +35,27 @@ namespace TodoList.Controllers
 
         }
 
+        [HttpGet("{Email}")]
+        public IActionResult GetName(string email) // To retrieves a specific user by login email
+        {
+            try
+            {
+                Claim? claimEmail = User?.FindFirst(ClaimTypes.Email); // To retrieve user email from the claims.
+                if (claimEmail == null)
+                {
+                    return NotFound("User not found.");
+                }
+                string user = _authService.GetFullName(claimEmail.Value); // To get a specific user"s fullName for the authenticated user.
+                var responseObject = new { user = user };
+                return Ok(responseObject);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Error occured.\n" + ex.Message);
+            }
+
+
+        }
     }
 }

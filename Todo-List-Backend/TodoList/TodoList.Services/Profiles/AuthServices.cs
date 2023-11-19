@@ -59,5 +59,19 @@ namespace TodoList.Services.Profiles
                 return CreateToken(user);
             }
         }
+
+        public string GetFullName(string email)  // To retrieves all Todos for the authenticated user.
+        {
+            User user = _userService.GetFullNameSql(email); // For retrieve user information based on provided email.
+            if (user == null) // Check if user is  not found, return an empty string.
+            {
+                return string.Empty;
+            }
+            else //otherwise, return Full Name.
+            {
+                string FullName = user.FirstName + " " + user.LastName;
+                return FullName;
+            }
+        }
     }
 }
