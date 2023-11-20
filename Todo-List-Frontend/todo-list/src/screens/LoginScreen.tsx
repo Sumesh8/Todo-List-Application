@@ -1,16 +1,17 @@
+// To importing necessary dependencies and components from React and other fliuent ui,
 import { SyntheticEvent, useState} from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import TodoStyle from "../styleSheets/Todo.style";
-import TodoString from "../displayText/String.json";
+import TodoString from "../displayTexts/String.json";
 import { useNavigate } from 'react-router-dom';
 
-// Functional component representing the login screen
+// Functional component representing for the login screen
 const LoginScreen = () => {
   // For intialize state variables to store email, password, and error message
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   // Create hook to navigate to different pages in the app
   const navigate = useNavigate();
@@ -30,8 +31,10 @@ const LoginScreen = () => {
         const data = await response.json();
         const token = data.token;
 
-        // To pass the token to the home page using React Router's navigate function
-        navigate('/home', { state: { token } });
+        //console.log(email);
+
+        // To pass the token and email to the home page using React Router's navigate function
+        navigate('/home', { state: { token , email} });
       } else {
         // To handle invalid credentials or other errors
         //console.log(email);
@@ -57,12 +60,11 @@ const LoginScreen = () => {
 
   // This is JSX structure for the login screen component
   return (
-    <>
       <div className={TodoStyle.appContainerForLogin}>
         <Header />
         <body className={TodoStyle.bodyStyleForLogin}>
           <div className={TodoStyle.inputsFormStyle}>
-            <h3 className={TodoStyle.textWhite}>{TodoString.headerLogin}</h3>
+            <h3 className={TodoStyle.textRed}>{TodoString.headerLogin}</h3>
             <form onSubmit={submitHandler}>
               <input
                 className={TodoStyle.emailStyle}
@@ -88,7 +90,6 @@ const LoginScreen = () => {
         </body>
         <Footer />
       </div>
-    </>
   );
 }
 

@@ -1,4 +1,4 @@
-// This is a main style sheet. There are use fliuent ui for the style sheet for easer.
+// This is the main style sheet. There are use fliuent ui for the style sheet for easer.
 
 import { IProcessedStyleSet, IStyle, mergeStyleSets } from "@fluentui/react";
 
@@ -12,8 +12,13 @@ interface ITodoStyle {
     submitButtonStyle : IStyle;
     submitAreaStyle : IStyle;
     bottomStyle : IStyle;
-    textWhite : IStyle;
+    textRed : IStyle;
     errorMessage: IStyle;
+    appContainerForHome : IStyle;
+    bodyStyleForHome : IStyle;
+    pivotRoot : IStyle;
+    pivotContainer : IStyle;
+    UserName : IStyle;
 }
 
 const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
@@ -46,7 +51,7 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
     },
 
     bodyStyleForLogin  : {
-        display : "flex",
+        //display : "flex",
         justifyContent : "center",
         alignItems : "center",
         top : "50%",
@@ -112,14 +117,59 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
         backgroundSize: "contain",
     },
 
-    textWhite : {
+    textRed : {
         color : "rgb(160, 50, 50)",
+        display : "flex",
+        justifyContent : "center",
     },
 
     errorMessage : {
         color : "rgb(160, 50, 50)",
         display : "flex",
         justifyContent : "center",
+    },
+
+    appContainerForHome : {
+        overflow: "hidden", 
+        width : "50%",
+        height : "50%", 
+        position : "absolute",
+        top : "50%",
+        left : "50%",
+        transform : "translate(-50% , -50%) ",
+        borderRadius : 20,
+        borderWidth : 5,
+        borderStyle: "solid",  
+        borderColor: "rgb(76,108,152)",
+        boxShadow : 
+            "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+        backgroundColor : "rgb(76,108,152)",
+    },
+
+    bodyStyleForHome  : {
+        //display : "flex",
+        //justifyContent : "center",
+        //alignItems : "center",
+        top : "50%",
+        
+    },
+
+    UserName : {
+        display : "flex",
+        justifyContent : "center",
+        //alignItems : "center",
+        //top : "50%",
+        
+    },
+
+    pivotRoot : {
+        display : "flex",
+        justifyContent : "center",
+    },
+
+    pivotContainer : {
+        
+        //margin : 20,
     },
 
 })

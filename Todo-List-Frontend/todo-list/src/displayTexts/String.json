@@ -1,0 +1,35 @@
+{
+    "header" : "Todo List",
+    "header.comment" : "This string for header",
+
+    "headerLogin" : "Login Page",
+    "headerLogin.comment" : "This string for header of login page",
+
+    "textEmailBox" : "Enter your Email",
+    "textEmailBox.comment" : "This string for default diplay in email input field",
+
+    "textPasswordBox" : "Enter your Password",
+    "textPasswordBox.comment" : "This string for defult diplay in password input field",
+
+    "submitLogin" : "Login",
+    "submitLogin.comment" : "This string for submit button of login page",
+
+    "headerHome" : "User Name : ",
+    "headerHome.comment" : "This string for header of Home page",
+
+    "pivots" : {
+        "taskFormTab" : "Task Form",
+        "tasksTab" : "Tasks",
+        "completedTab" : "Completed"
+    },
+
+    "submitTask" : "Add Task",
+    "submitTask.comment" : "This string for add task button of task form page",
+
+    "messageBody" : "Task Added",
+    "messageBody.comment" : "This string for message body of task form page"
+
+    
+
+}
+
