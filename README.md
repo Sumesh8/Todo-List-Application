@@ -6,7 +6,7 @@
 - [Functionality](#functionality)
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
-- [Future Works](#future works)
+- [Future Works](#futureworks)
 
 # Introduction
 
