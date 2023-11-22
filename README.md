@@ -108,6 +108,6 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 
 ![12](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/066954b3-b818-444c-b9dd-82bf58ad2862)
 
-# Future Works
+# FutureWorks
 - Will implement a logout operation.
 - Will implement create a new user.
