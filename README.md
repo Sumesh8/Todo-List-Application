@@ -97,7 +97,7 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 
 ![9](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/bb776db1-a254-401b-bbb7-2cd5c100131c)
 
-9. Toggling a task between Completed Tab and Task Tab
+9. Toggling a task between Completed Tab and Tasks Tab
 
 ![10](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/6c0b2c70-7ff6-4b93-8dbe-e4c974046c34)
 
