@@ -6,6 +6,7 @@
 - [Functionality](#functionality)
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
+- [Future Works](#future works)
 
 # Introduction
 
@@ -24,7 +25,7 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 - Users can view complete Todo items in the Complete Tab.
 - Users can create a Todo item in the Task Form.
 - Users can update a Todo item in the Task Form.
-- Users can delete a Todo item
+- Users can delete a Todo item.
 - Displaying Error Messages in Task Form for creating and displaying task.
 
 # Technologies
@@ -106,3 +107,7 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 ![11](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/55dddb6a-4fe2-4828-a941-c1bacb8926a3)
 
 ![12](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/066954b3-b818-444c-b9dd-82bf58ad2862)
+
+# Future Works
+- Will implement a logout operation.
+- Will implement create a new user.
