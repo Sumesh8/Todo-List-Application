@@ -17,7 +17,7 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 ## Login page
 - Users can Authenticated by providing an email and password.
 - Displaying Error Messages.
-- Create a JWT token for identifying users for data transfer between frontend and backend.
+- Create a JWT token for identifying users for data transfer between the frontend and backend.
 
 ## Home page
 - Users can view incomplete Todo items in the Tasks Tab.
@@ -105,8 +105,8 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 
 ![10](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/6c0b2c70-7ff6-4b93-8dbe-e4c974046c34)
 
-10. Deleting a task(Here deleted the task 1)
+10. Deleting a task(deleted the Task 1)
 
-![Uploading 11.png…]()
+![11](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/55dddb6a-4fe2-4828-a941-c1bacb8926a3)
 
 ![12](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/066954b3-b818-444c-b9dd-82bf58ad2862)
