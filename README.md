@@ -43,11 +43,7 @@ This is a Simple Todo Application with CRUD operation. Users can create a new To
 
 ![1](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/834d9411-1e22-4954-93a9-5703c08bfab5)
 
-2. Success messages on the login page for authentication
-
-![1](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/221f1565-745a-4010-b720-e6691e15423f)
-
-3. Error messages on the login page for authentication
+2. Error messages on the login page for authentication
 
 ![2](https://github.com/Sumesh8/Todo-List-Application/assets/107548452/88a024e2-f415-416d-94be-3ecdefb6cc81)
 
