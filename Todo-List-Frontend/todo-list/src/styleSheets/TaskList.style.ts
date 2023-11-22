@@ -5,6 +5,7 @@ import { IProcessedStyleSet, IStyle, mergeStyleSets } from "@fluentui/react";
 interface ITaskListStyle {
     taskIem : IStyle;
     iconStyle : IStyle;
+    disabled : IStyle;
  
 
 }
@@ -30,6 +31,14 @@ const TaskListStyle : IProcessedStyleSet<ITaskListStyle> = mergeStyleSets({
         margin: '0 3px',
         selectors : {
             "&:hover": {cursor: "pointer" },
+        },
+
+    },
+
+    disabled : {
+        color: "gray",
+        selectors: {
+            "&:hover": { cursor: "default"} ,
         },
 
     },

@@ -6,16 +6,17 @@ interface ITodoStyle {
     appContainerForLogin : IStyle;
     headerStyle : IStyle;
     bodyStyleForLogin  : IStyle;
+    bodyStyleForHome  : IStyle;
     inputsFormStyle : IStyle;
     emailStyle : IStyle;
     passwordStyle : IStyle;
     submitButtonStyle : IStyle;
     submitAreaStyle : IStyle;
+    errorMessageLogin : IStyle;
     bottomStyle : IStyle;
     textRed : IStyle;
     errorMessage: IStyle;
     appContainerForHome : IStyle;
-    bodyStyleForHome : IStyle;
     pivotRoot : IStyle;
     pivotContainer : IStyle;
     UserName : IStyle;
@@ -82,6 +83,7 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
     },
 
     submitAreaStyle : {
+        marginTop : 40,
         display : "flex",
         justifyContent : "center",
         alignItems : "center",
@@ -96,7 +98,7 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
         fontWeight: "bold",
         borderRadius : 6,
         borderWidth : 5,
-        borderColor : "white",
+        borderColor : "rgb(240, 240, 240)",
         '&:hover': {
             width: 100,
             height: 40,
@@ -104,6 +106,10 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
             color: "rgb(160, 50, 50)",
             borderColor : "rgb(160, 50, 50)",
         },
+    },
+
+    errorMessageLogin : {
+        marginTop : 20,
     },
 
     bottomStyle : {
@@ -130,6 +136,7 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
     },
 
     appContainerForHome : {
+        minHeight : 608,
         overflow: "hidden", 
         width : "50%",
         height : "50%", 
@@ -151,6 +158,10 @@ const TodoStyle : IProcessedStyleSet<ITodoStyle>  = mergeStyleSets({
         //justifyContent : "center",
         //alignItems : "center",
         top : "50%",
+        minHeight : 358,
+        //flex: 1, /* Allow the content to take up remaining space */
+        //overflowX: 'auto', /* Enable vertical scrolling if content overflows */
+
         
     },
 

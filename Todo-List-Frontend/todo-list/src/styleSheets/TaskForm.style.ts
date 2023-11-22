@@ -9,7 +9,7 @@ interface ITaskFormStyle {
 }
 const TaskFormStyle : IProcessedStyleSet<ITaskFormStyle> = mergeStyleSets({
     submitButtonStyle : {
-        marginLeft : -15,
+        marginLeft : 10,
         width : 100,
         height : 40,
         backgroundColor : "rgb(76,108,152)",

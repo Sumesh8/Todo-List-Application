@@ -14,6 +14,21 @@
     "submitLogin" : "Login",
     "submitLogin.comment" : "This string for submit button of login page",
 
+    "messageBodyForLoginError1" : "Please Enter Email and Password!!!",
+    "messageBodyForLoginError1.comment" : "This string for a error message of login page",
+
+    "messageBodyForLoginError2" : "Please Enter the Email!!!",
+    "messageBodyForLoginError2.comment" : "This string for a error message of login page",
+
+    "messageBodyForLoginError3" : "Please Enter the password!!!",
+    "messageBodyForLoginError3.comment" : "This string for a error message of login page",
+
+    "messageBodyForLoginError4" : "Invalid Email or Password!!!",
+    "messageBodyForLoginError4.comment" : "This string for a error message of login page",
+
+    "messageBodyForLoginErrorSever" : "An error occurred during login. Please try again later!!!",
+    "messageBodyForLoginErrorSever.comment" : "This string for a sever error message of login page",
+
     "headerHome" : "User Name : ",
     "headerHome.comment" : "This string for header of Home page",
 
@@ -26,10 +41,23 @@
     "submitTask" : "Add Task",
     "submitTask.comment" : "This string for add task button of task form page",
 
-    "messageBody" : "Task Added",
-    "messageBody.comment" : "This string for message body of task form page"
+    "updateTask" : "Update Task",
+    "updateTask.comment" : "This string for update task button of task form page",
 
-    
+    "messageBodyForCreate" : "Task Added!!!",
+    "messageBodyForCreate.comment" : "This string for message body of task form page for create",
+
+    "messageBodyForErrorCreate" : "Failed to Create task!!!",
+    "messageBodyForErrorCreate.comment" : "This string for message body of task form page for error in creating",
+
+    "messageBodyForUpdate" : "Task Updated!!!",
+    "messageBodyForUpdate.comment" : "This string for message body of task form page for update",
+
+    "messageBodyForErrorUpdate" : "Failed to Update task!!!",
+    "messageBodyForErrorUpdate.comment" : "This string for message body of task form page for error in updating",
+
+    "messageBodyForErrorServer" : "Sever Error. Please try again later!!!",
+    "messageBodyForErrorServer.comment" : "This string for message body for sever error"
 
 }
 

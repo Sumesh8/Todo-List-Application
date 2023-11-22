@@ -21,7 +21,17 @@ const HomeScreen = () => {
   const email = location.state?.email;
 
   // To state to keep track of the currently selected tab in the Pivot component,
-  const [selectedKey, setSlectedKey] = useState<string>(PivotKeysEnum.TaskForm);
+  const [selectedKey, setSelectedKey] = useState<string>(PivotKeysEnum.TaskForm);
+
+// To state to keep track of the currently selected tab in the Pivot component,
+const [editTaskId, setEditTaskId] = useState<number | null>(null);
+
+useEffect(() => {
+  if (editTaskId) {
+    setSelectedKey(PivotKeysEnum.TaskForm);
+  }
+
+},[editTaskId])
 
   return (
     // Main container for the Home Screen
@@ -30,7 +40,6 @@ const HomeScreen = () => {
       <body className={TodoStyle.bodyStyleForHome}>
         {/* Component to display the username */}
         <GetUserName token={token} email={email} />
-
         {/* Container for the Pivot component */}
         <Stack className={TodoStyle.pivotContainer}>
 
@@ -38,28 +47,33 @@ const HomeScreen = () => {
             // Setting the selected tab based on the state
             selectedKey={String(selectedKey)}
             styles={{ root: TodoStyle.pivotRoot }}
-            // For handling tab click to update the selected tab in the state,
             onLinkClick={(item?: PivotItem) => {
-              setSlectedKey(item?.props.itemKey || PivotKeysEnum.TaskForm);
+              // For handling tab click to update the selected tab in the state,
+              if (item?.props.itemKey !== PivotKeysEnum.TaskForm){
+                setEditTaskId(null);
+              }
+              setSelectedKey(item?.props.itemKey || PivotKeysEnum.TaskForm);
             }}
+            
           >
             {/* Tab for displaying the task form component */}
             <PivotItem headerText={TodoString.pivots.taskFormTab} itemKey={PivotKeysEnum.TaskForm}>
-              <TaskForm token={token}/>
+              <TaskForm token={token} editTaskId={editTaskId}/>
             </PivotItem>
 
             {/* Tab for displaying the incomplete tasks */}
             <PivotItem headerText={TodoString.pivots.tasksTab} itemKey={PivotKeysEnum.Tasks}>
-            <GetTasks token={token} completeStatus={0} />
+            <GetTasks token={token} completeStatus={0} setEditTaskId={setEditTaskId}/>
             </PivotItem>
 
             {/* Tab for displaying completed tasks */}
             <PivotItem headerText={TodoString.pivots.completedTab} itemKey={PivotKeysEnum.Completed}>
-              <GetTasks token={token} completeStatus={1} />
+              <GetTasks token={token} completeStatus={1} setEditTaskId={setEditTaskId}/>
             </PivotItem>
           </Pivot>
         </Stack>
       </body>
+      <Footer />
     </div>
   );
 }
